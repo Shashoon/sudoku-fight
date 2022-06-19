@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Poppins:wght@300;400;600;700;800&display=swap');
+
 .App {
   text-align: center;
+  font-family: 'Poppins', sans-serif;
 }
 
 .App-logo {
@@ -15,17 +18,41 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  height: 13vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  font-size: 8vh;
+  color: #282c34;
+  background-image: var(--my-gradient-turquoise);
+  background-clip: text;
+  color: transparent;
+}
+
+.app-wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: var(--my-dark-grey);
+  padding-bottom: 2.4vh;
+}
+
+.header-btn {
+  background-color: #282c34;
+  color: cadetblue;
+  padding: 13px;
+  font-size: 1.2rem;
+  border-radius: 20px;
+  box-shadow: 3px 3px 10px #a8a8a8;
+}
+
+.btn:hover {
+  cursor: pointer;
 }
 
 @keyframes App-logo-spin {

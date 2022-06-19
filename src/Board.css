@@ -1,0 +1,140 @@
+.main {
+    display: flex;
+    width: 75vw;
+    padding-top: 30px;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
+
+.board {
+    height: 900px;
+    width: 900px;
+}
+
+.board-left-top-edge {
+    border-top-left-radius: 20px;
+}
+
+.board-right-top-edge {
+    border-top-right-radius: 20px;
+}
+
+.board-left-bot-edge {
+    border-bottom-left-radius: 20px;
+}
+
+.board-right-bot-edge {
+    border-bottom-right-radius: 20px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100px;
+    width: 900px;
+}
+
+.cube {
+    background-color: var(--my-dark-grey);
+    color: white;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1.8px gray;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.cube:hover {
+    cursor: pointer;
+}
+
+.active {
+    background-color: var(--my-turquoise) !important;
+}
+
+.active-cube {
+    background-color: seagreen;
+}
+
+.marked {
+    background-color: #b3dcdd !important;
+    color: black;
+}
+
+.colored-cube {
+    background-color: #16181b;
+}
+
+.top {
+    border-top: 3px solid var(--my-turquoise);
+}
+
+.bottom {
+    border-bottom: 3px solid var(--my-turquoise);
+}
+
+.right {
+    border-right: 3px solid var(--my-turquoise);
+}
+
+.left {
+    border-left: 3px solid var(--my-turquoise);
+}
+
+.numbers-deck {
+    height: 85px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.left-edge {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.right-edge {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.deck-cube {
+    background-color: #16181b;
+    color: white;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.error {
+    animation: shake 0.25s;
+    animation-iteration-count: 3;
+    
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+.red {
+    background-color: red;
+}
+
+.deck-cube:hover {
+    cursor: pointer;
+}
