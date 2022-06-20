@@ -88,7 +88,6 @@ const Board = () => {
                 newBoard();
             }
         }
-        document.getElementById(rowIndex + '-' + colIndex).style.animation = '';
 
         return check;
     }
@@ -96,7 +95,7 @@ const Board = () => {
 
     return (
         <div className='main'>
-            <Navbar newBoard={newBoard} solveBoard={solveBoard} mistakesCount={mistakesCount} />
+            <Navbar newBoard={newBoard} mistakesCount={mistakesCount} />
             <div className='game'>
                 <div className='board'>
                     {

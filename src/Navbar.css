@@ -26,19 +26,32 @@
 .errors-deck {
     display: flex;
     justify-content: space-around;
+    background-color: #7b2424;
+    background-image: none;
 }
 
 .error-cube {
-    color: grey;
-    background-color: var(--my-gradient-turquoise);
-    font-family: "Shadows Into Light",cursive;
-    font-weight: 600;
-}
-
-.mistake {
-    color: #d32f2f;
+    color: black;
     background-color: var(--my-gradient-turquoise);
     font-family: "Shadows Into Light",cursive;
     font-size: 3vh;
     font-weight: 600;
 }
+
+.mistake-holder {
+    height: 50px;
+    width: 50px;
+    background-color: #540808;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mistake {
+    color: white;
+    font-family: "Shadows Into Light",cursive;
+    font-size: 3.5vh;
+    font-weight: 600;
+}
+
