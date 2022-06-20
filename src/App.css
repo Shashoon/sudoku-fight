@@ -28,7 +28,7 @@
 }
 
 h1 {
-  font-size: 8vh;
+  font-size: 8vw;
   color: #282c34;
   background-image: var(--my-gradient-turquoise);
   background-clip: text;

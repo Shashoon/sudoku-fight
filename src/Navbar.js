@@ -22,7 +22,7 @@ const Navbar = ({ newBoard, solveBoard, mistakesCount }) => {
 
     return (
         <div className='navbar'>
-            <div className='errors-deck'>
+            <div className='btn errors-deck'>
                 {Array.from({ length: 3 }, (_, index) => index).map((curr) => {
                     return (
                         <div className={!(mistakesCount < (curr + 1)) ? ' mistake' : ' error-cube'} key={curr}>
@@ -39,6 +39,9 @@ const Navbar = ({ newBoard, solveBoard, mistakesCount }) => {
                     </div>) :
                     ''
             }
+            <div className='btn' onClick={() => solveBoard()}>
+                Solve Game
+            </div>
             <div className='btn' onClick={() => {
                 newBoard();
                 if (time > 0) {
@@ -48,9 +51,6 @@ const Navbar = ({ newBoard, solveBoard, mistakesCount }) => {
                 }
             }}>
                 New Game
-            </div>
-            <div className='btn' onClick={() => solveBoard()}>
-                Solve Game
             </div>
         </div >
     )

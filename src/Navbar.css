@@ -2,17 +2,21 @@
 
 .navbar {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: stretch;
-    flex-direction: column;
-    height: 55%;
+    flex-direction: row-reverse;
 }
 
 .btn {
-    padding: 13px;
-    font-size: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    font-size: 1.6vw;
     border-radius: 20px;
+    width: 20vw;
     box-shadow: 3px 3px 10px #a8a8a8;
+    background-image: var(--my-gradient-turquoise);
 }
 
 .btn:hover {
@@ -21,19 +25,13 @@
 
 .errors-deck {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    border: 2px solid grey;
-    border-radius: 20px;
-    height: 5vh;
+    justify-content: space-around;
 }
 
 .error-cube {
     color: grey;
     background-color: var(--my-gradient-turquoise);
     font-family: "Shadows Into Light",cursive;
-    font-size: 5vh;
     font-weight: 600;
 }
 
@@ -41,6 +39,6 @@
     color: #d32f2f;
     background-color: var(--my-gradient-turquoise);
     font-family: "Shadows Into Light",cursive;
-    font-size: 5vh;
+    font-size: 3vh;
     font-weight: 600;
 }

@@ -1,6 +1,5 @@
 import './App.css';
 import Board from './Board';
-import Test from './Test';
 
 
 
