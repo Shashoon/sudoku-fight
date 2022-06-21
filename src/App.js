@@ -16,9 +16,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>
+        <div className='title' id='title'>
           Sudoku Fight
-        </h1>
+        </div>
       </header>
       <div className='app-wrapper' id="reset">
         <Board />

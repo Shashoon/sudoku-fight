@@ -138,7 +138,7 @@ const Board = () => {
                         {numbers.map((curr) => (
                             <div className={'deck-cube' +
                                 (chosenNumber == curr ? ' active' : '') +
-                                (curr == 1 ? ' left top-edge' : curr == 9 ? ' right bot-edge' : '')}
+                                (curr == 1 ? ' left left-edge' : (curr == 9 ? ' right right-edge' : ''))}
                                 key={curr}
                                 id={curr}
                                 onClick={e => e.target.innerHTML == chosenNumber ?

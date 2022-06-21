@@ -1,14 +1,18 @@
 .main {
     display: flex;
     width: 100vw;
-    height: 85vh;
+    height: 100vh;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    padding-top: 20px;
 }
 
 .game {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
 }
 
 .board {
@@ -96,23 +100,23 @@
 
 .deck-row {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
-.top-edge {
+.left-edge {
     border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
-.bot-edge {
+.right-edge {
+    border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
 }
 
 .deck-cube {
     background-color: #16181b;
     color: white;
-    width: 6vw;
+    width: 100px;
     height: 7vh;
     display: flex;
     justify-content: center;
@@ -152,6 +156,10 @@
 
 @media screen and (max-width: 1080px) {
     .board {
-        width: 80vw;
+        width: 95vw;
+    }
+
+    .numbers-deck {
+        width: 95vw;
     }
   }

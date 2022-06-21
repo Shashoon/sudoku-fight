@@ -23,6 +23,7 @@ const Navbar = ({ newBoard, mistakesCount }) => {
     return (
         <div className='navbar'>
             <div className='btn' onClick={() => {
+                document.getElementById('title').style.display = 'none';
                 newBoard();
                 if (time > 0) {
                     setTime(0);
