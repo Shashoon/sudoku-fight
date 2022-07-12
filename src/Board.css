@@ -4,7 +4,7 @@
     height: 100vh;
     flex-direction: column;
     justify-content: flex-start;
-    padding-top: 20px;
+    padding-top: 4%;
 }
 
 .game {
@@ -12,10 +12,7 @@
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    padding-top: 20px;
-}
-
-.board {
+    padding-top: 4%;
 }
 
 .board-left-top-edge {
@@ -42,15 +39,14 @@
 }
 
 .cube {
-    background-color: var(--my-dark-grey);
-    color: white;
+    color: black;
     width: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     border: solid 1.8px gray;
-    font-size: 4vh;
-    font-weight: 500;
+    font-size: 5vh;
+    font-weight: 600;
 }
 
 .cube:hover {
@@ -71,7 +67,7 @@
 }
 
 .colored-cube {
-    background-color: #16181b;
+    background-color: #d2d2d2;
 }
 
 .top {
@@ -92,7 +88,7 @@
 
 .numbers-deck {
     height: 85px;
-    margin-top: 25px;
+    margin-top: 20px;
     margin-bottom: 30px;
     display: flex;
     flex-direction: column;
@@ -104,31 +100,31 @@
 }
 
 .left-edge {
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
 
 .right-edge {
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .deck-cube {
-    background-color: #16181b;
-    color: white;
-    width: 100px;
+    background-color: #d2d2d2;
+    color: black;
+    width: 102px;
     height: 7vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3vh;
-    font-weight: 500;
-    border: 2px solid var(--my-turquoise);
+    font-size: 5vh;
+    font-weight: 600;
+    border: 1px solid var(--my-turquoise);
 }
 
 .error {
-    animation: shake 0.25s;
-    animation-iteration-count: 3;
+    animation: shake 0.15s;
+    animation-iteration-count: 2;
     
 }
 
@@ -137,7 +133,7 @@
     10% { transform: translate(-1px, -2px) rotate(-1deg); }
     20% { transform: translate(-3px, 0px) rotate(1deg); }
     30% { transform: translate(3px, 2px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(1deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); background-color: red; }
     50% { transform: translate(-1px, 2px) rotate(-1deg); }
     60% { transform: translate(-3px, 1px) rotate(0deg); }
     70% { transform: translate(3px, 1px) rotate(-1deg); }
@@ -161,5 +157,9 @@
 
     .numbers-deck {
         width: 95vw;
+    }
+
+    .game {
+        padding-top: 8%;
     }
   }

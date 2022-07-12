@@ -54,7 +54,7 @@ const Board = () => {
         setActiveCube({ colIndex: null, rowIndex: null });
     }
 
-    const getCubeStyle = (colIndex, rowIndex, currCol) => {
+    const getCubeStyle = (colIndex, rowIndex) => {
         const between = (curr, min, max) => {
             return curr >= min && curr <= max;
         }
@@ -75,19 +75,24 @@ const Board = () => {
         let check = sol[rowIndex][colIndex] == chosenNumber ? true : false;
         let cube = document.getElementById(rowIndex + '-' + colIndex).className;
         //document.getElementById(rowIndex + '-' + colIndex).className = !check && !(cube.includes('error')) ? (cube + ' error') : cube;
-
-        if (cube.includes('error'))
-            cube.replace(' error', '')
+        //document.getElementById(rowIndex + '-' + colIndex).style.animation = 'shake 0.25s';
+        console.log(cube);
+        /*if (cube.includes('error')) {
+            cube.replace('error', '');
+        }*/
 
         if (!check) {
-            document.getElementById(rowIndex + '-' + colIndex).className += ' error';
-            setMistakesCount(mistakesCount + 1)
+            //document.getElementById(rowIndex + '-' + colIndex).className += ' error';
+            document.getElementById(rowIndex + '-' + colIndex).style.animation = 'shake 0.25s';
+            setMistakesCount(mistakesCount + 1);
 
             if (mistakesCount === 3) {
                 alert('You loss');
                 newBoard();
             }
         }
+
+        console.log(cube)
 
         return check;
     }
@@ -103,7 +108,7 @@ const Board = () => {
                             return (
                                 <div className={'row' + ((rowIndex + 1) % 3 == 0 && rowIndex !== 8 ? ' bottom' : '')} key={rowIndex}>
                                     {currRow.map((currCol, colIndex) =>
-                                        <div className={'cube' + getCubeStyle(colIndex, rowIndex, currCol)}
+                                        <div className={'cube' + getCubeStyle(colIndex, rowIndex)}
                                             key={rowIndex + '-' + colIndex}
                                             id={rowIndex + '-' + colIndex}
                                             onClick={(e) => {
@@ -117,10 +122,6 @@ const Board = () => {
                                                 }
 
                                                 let arr = board.slice();
-                                                //arr[rowIndex][colIndex] = arr[rowIndex][colIndex] != null ? arr[rowIndex][colIndex] :
-                                                //(isLegal(colIndex, rowIndex) === false ? null : chosenNumber);
-                                                //arr[rowIndex][colIndex] = arr[rowIndex][colIndex] == null ?
-                                                //(isLegal(colIndex, rowIndex) == true ? chosenNumber : null) : arr[rowIndex][colIndex];
                                                 let check = isLegal(colIndex, rowIndex);
                                                 arr[rowIndex][colIndex] = check == true ? chosenNumber : arr[rowIndex][colIndex];
                                                 setBoard(arr);

@@ -13,7 +13,8 @@
     align-items: center;
     justify-content: center;
     padding: 5px;
-    font-size: 1.6vw;
+    font-size: 2vw;
+    font-weight: 700;
     border-radius: 20px;
     width: 20vw;
     box-shadow: 3px 3px 10px #a8a8a8;
@@ -27,7 +28,7 @@
 .errors-deck {
     display: flex;
     justify-content: space-around;
-    background-color: #7b2424;
+    background-color: #b72626;
     background-image: none;
 }
 
@@ -40,8 +41,8 @@
 }
 
 .mistake-holder {
-    height: 3vh;
-    width: 4vw;
+    height: 95%;
+    width: 25%;
     background-color: #540808;
     border-radius: 50%;
     display: flex;
@@ -52,7 +53,17 @@
 .mistake {
     color: white;
     font-family: "Shadows Into Light",cursive;
-    font-size: 3.5vh;
+    font-size: 5vw;
     font-weight: 600;
 }
+
+@media screen and (max-width: 1080px) {
+    .navbar {
+        height: 3.5vh;
+    }
+
+    .btn {
+        font-size: 3vw;
+    }
+  }
 

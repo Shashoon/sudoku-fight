@@ -17,7 +17,6 @@
 }
 
 .App-header {
-  background-color: #282c34;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -27,6 +26,7 @@
 
 .title {
   font-size: 8vw;
+  font-weight: 700;
   color: #282c34;
   background-image: var(--my-gradient-turquoise);
   background-clip: text;

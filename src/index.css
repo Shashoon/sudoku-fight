@@ -16,6 +16,6 @@ code {
   --my-turquoise: #6dd5ed;
   --my-gradient-turquoise: linear-gradient(to right, #2193b0, #6dd5ed);
   --my-tl-gradient-turquoise: linear-gradient(to left, #2193b0, #6dd5ed);
-  --my-dark-grey: #282c34;
+  --my-dark-grey: white;
 }
 
